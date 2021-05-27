@@ -1,0 +1,6 @@
+ verify that  is a floating point number.
+
+In this task, a valid float number must satisfy all of the following requirements:
+
+ Number can start with +, - or . symbol.
+For example:
