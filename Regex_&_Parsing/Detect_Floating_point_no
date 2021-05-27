@@ -1,6 +1,31 @@
- verify that  is a floating point number.
+"""
+re
+A regular expression (or RegEx) specifies a set of strings that matches it.
 
-In this task, a valid float number must satisfy all of the following requirements:
+A regex is a sequence of characters that defines a search pattern, mainly for the use of string pattern matching.
 
- Number can start with +, - or . symbol.
-For example:
+
+The re.search() expression scans through a string looking for the first location where the regex pattern produces a match.
+It either returns a MatchObject instance or returns None if no position in the string matches the pattern.
+
+Code
+
+>>> import re
+>>> print bool(re.search(r"ly","similarly"))
+True
+
+The re.match() expression only matches at the beginning of the string.
+It either returns a MatchObject instance or returns None if the string does not match the pattern.
+Code
+
+>>> import re
+>>> print bool(re.match(r"ly","similarly"))
+False
+>>> print bool(re.match(r"ly","ly should be in the beginning"))
+True
+"""
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+T = int(input())
+for i in range(1, T+1):
+    print(bool(re.match(r'^[-+]?[0-9]*\.[0-9]+$', input())))
